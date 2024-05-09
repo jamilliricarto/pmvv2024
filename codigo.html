@@ -1,0 +1,15 @@
+function doGet() {
+    return HtmlService.createHtmlOutputFromFile('index');
+  }
+  
+  
+  function processForm(form) {
+    var sheet = SpreadsheetApp.getActiveSheet();
+    var row = [form.nome, form.escola, form.turno, form.qtdtur, form.qtdma, form.qtdfal, form.qtdtur2, form.qtdma2, form.qtdfal2, form.qtdtur3, form.qtdma3, form.qtdfal3, form.qtdtur4, form.qtdma4, form.qtdfal4, form.seislp,	form.seism,	form.seish,	
+      form.seisg,	form.seisef,	form.seisc,	form.seisa,	form.seisi,	form.setelp,	form.setem,	
+      form.seteh,	form.seteg,	form.seteef,	form.setec,	form.setea,	form.setei,	form.oitolp,	
+      form.oitom,	form.oitoh,	form.oitog,	form.oitoef,	form.oitoc,	form.oitoa,	form.oitoi,	form.novelp,	
+      form.novem,	form.noveh,	form.noveg,	form.noveef,	form.novec,	form.novea,	form.novei];
+    sheet.appendRow(row);
+    return true;
+  }  
