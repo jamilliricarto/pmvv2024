@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+
+    <style>
+
+      .container{
+        background-color: #CFE2FF;
+      }
+      
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 2px solid #ccc;
+
+        }
+
+        .tab-input {
+            max-width: 50px;
+            max-height: 40px;
+            border-radius: 3px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            text-align: center;
+        }
+
+        .tab-input:focus {
+            outline: none;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 5px #3bd813;
+        }
+
+        .tab-th {
+            width: 300px;
+            background-color: #333;
+            border: 2px solid #ccc;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .tab-td {
+            border: 2px solid #ccc;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            padding: 4px !important;
+
+        }
+
+        .dados {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>    
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <h1> Relatório Gerencial da Unidade Escolar</h1> <img src="https://www.vilavelha.es.gov.br/img/logos/2023%20Logos%20PMVV%20%28curvas%29_horizontal.svg" alt="Logo Semed" width="240" height="180"> <br>
+                
+                </a>
+            </div>
+            <p class="h6">Os dados informados são resultado do segundo trimestre do ano letivo de sua escola.</p>
+        </nav>
+        <form id="myForm">
+
+            <label for="nome"><b>1 - NOME COMPLETO</b></label>
+            <input type="text" class="form-control dados" id="nome" name="nome"  required><br>
+
+            <label for="escola"><b>2 - ESCOLA</b></label>
+            <input type="text" class="form-control" id="escola" name="escola"  required><br>
+
+            <label for="turno"><b>3 - TURNO DE TRABALHO:</b></label><br>
+            <input type="radio" id="matutino" name="turno" value="matutino" required>
+            <label for="matutino">Matutino</label><br>
+
+            <input type="radio" id="vespertino" name="turno" value="vespertino" required>
+            <label for="vespertino">Vespertino</label><br>
+
+            <input type="radio" id="nightnoturno" name="turno" value="noturno" required>
+            <label for="noturno">Noturno</label><br><br>
+
+            <label for="formGroupExampleInput2" class="form-label"><b>4 - Informe a quantidade de alunos com média trimestral abaixo da média em cada componente curricular.<br>
+            Quantidade de  alunos  com 20% ou mais de faltas  (considerando a carga horária do estudante ate  à data atual. Obs essa informação está no Sge. <br>
+            Quantidade de alunos matrículados em cada ano/série e a quantidade de turmas:
+              
+              </b></label>
+            <div class="table">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th class="tab-th">Séries</th>
+                            <th class="tab-th" scope="col">Qtd de Turmas</th>
+                            <th class="tab-th" scope="col">Qtd de Matrículas</th>
+                            <th class="tab-th" scope="col" ><font size="2">Qtd de alunos com 20% ou mais de Faltas </font></th>
+                            <th class="tab-th" scope="col">Língua Portuguesa</th>
+                            <th class="tab-th" scope="col">Matemática</th>
+                            <th class="tab-th" scope="col">História</th>
+                            <th class="tab-th" scope="col">Geografia</th>
+                            <th class="tab-th" scope="col">Educação Física</th>
+                            <th class="tab-th" scope="col">Ciências</th>
+                            <th class="tab-th" scope="col">Artes</th>
+                            <th class="tab-th" scope="col">Inglês</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td class="tab-td">6° ano </td>
+                            <td><input class="tab-input" type="number" id="qtdtur"  name="qtdtur"></td>
+                            <td><input class="tab-input" type="number" id="qtdma"  name="qtdma"></td>
+                            <td><input class="tab-input" type="number" id="qtdfal"  name="qtdfal"></td>
+                            <td><input class="tab-input" type="number" id="seislp" name="seislp"></td>
+                            <td><input class="tab-input" type="number" id="seism"  name="seism"></td>
+                            <td><input class="tab-input" type="number" id="seish"  name="seish"></td>
+                            <td><input class="tab-input" type="number" id="seisg"  name="seisg"></td>
+                            <td><input class="tab-input" type="number" id="seisef" name="seisef"></td>
+                            <td><input class="tab-input" type="number" id="seisc"  name="seisc"></td>
+                            <td><input class="tab-input" type="number" id="seisa"  name="seisa"></td>
+                            <td><input class="tab-input" type="number" id="seisi"  name="seisi"></td>
+                            
+
+                        </tr>
+                        <tr class="">
+                            <td class="tab-td">7° ano </td>
+                            <td><input class="tab-input" type="number" id="qtdtur2"  name="qtdtur2"></td>
+                            <td><input class="tab-input" type="number" id="qtdma2"  name="qtdma2"></td>
+                            <td><input class="tab-input" type="number" id="qtdfal2"  name="qtdfal2"></td>
+                            <td><input class="tab-input" type="number" id="setelp" name="setelp"></td>
+                            <td><input class="tab-input" type="number" id="setem"  name="setem"></td>
+                            <td><input class="tab-input" type="number" id="seteh"  name="seteh"></td>
+                            <td><input class="tab-input" type="number" id="seteg"  name="seteg"></td>
+                            <td><input class="tab-input" type="number" id="seteef" name="seteef"></td>
+                            <td><input class="tab-input" type="number" id="setec"  name="setec"></td>
+                            <td><input class="tab-input" type="number" id="setea"  name="setea"></td>
+                            <td><input class="tab-input" type="number" id="setei"  name="setei"></td>
+                            
+
+                        </tr>
+                        <tr class="">
+                            <td class="tab-td">8° ano </td>
+                            <td><input class="tab-input" type="number" id="qtdtur3"  name="qtdtur3"></td>
+                            <td><input class="tab-input" type="number" id="qtdma3"  name="qtdma3"></td>
+                            <td><input class="tab-input" type="number" id="qtdfal3"  name="qtdfal3"></td>
+                            <td><input class="tab-input" type="number" id="oitolp" name="oitolp"></td>
+                            <td><input class="tab-input" type="number" id="oitom"  name="oitom"></td>
+                            <td><input class="tab-input" type="number" id="oitoh"  name="oitoh"></td>
+                            <td><input class="tab-input" type="number" id="oitog"  name="oitog"></td>
+                            <td><input class="tab-input" type="number" id="oitoef" name="oitoef"></td>
+                            <td><input class="tab-input" type="number" id="oitoc"  name="oitoc"></td>
+                            <td><input class="tab-input" type="number" id="oitoa"  name="oitoa"></td>
+                            <td><input class="tab-input" type="number" id="oitoi"  name="oitoi"></td>
+                            
+
+                        </tr>
+                        <tr class="">
+                            <td class="tab-td">9° ano </td>
+                            <td><input class="tab-input" type="number" id="qtdtur4" name="qtdtur4"></td>
+                            <td><input class="tab-input" type="number" id="qtdma4"  name="qtdma4"></td>
+                            <td><input class="tab-input" type="number" id="qtdfal4" name="qtdfal4"></td>
+                            <td><input class="tab-input" type="number" id="novelp" name="novelp"></td>
+                            <td><input class="tab-input" type="number" id="novem"  name="novem"></td>
+                            <td><input class="tab-input" type="number" id="noveh"  name="noveh"></td>
+                            <td><input class="tab-input" type="number" id="noveg"  name="noveg"></td>
+                            <td><input class="tab-input" type="number" id="noveef" name="noveef"></td>
+                            <td><input class="tab-input" type="number" id="novec"  name="novec"></td>
+                            <td><input class="tab-input" type="number" id="novea"  name="novea"></td>
+                            <td><input class="tab-input" type="number" id="novei"  name="novei"></td>
+                            
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            
+
+
+            </div>
+
+            <input type="button" value="Enviar" onclick="submitForm()">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js">
+    </script>
+
+    <script>
+        // Array of possible autocomplete options
+        const escolas = [
+            "Região 1 - Cel. Joaquim Freitas",
+            "Região 1 - Dep. Mikeil Chequer",
+            "Região 1 - Des. Ferreira Coelho",
+            "Região 1 - Des. Cândido Marinho",
+            "Região 1 - Irmã Feliciana",
+            "Região 1 - Naydes Brandão",
+            "Região 1 - Prof. Ernani Souza",
+            "Região 1 - Prof. Luiz Malizeck",
+            "Região 1 - Prof. Thelmo Torres",
+            "Região 1 - Prof. Flávia Borgo",
+            "Região 1 - Prof Nice de Paula",
+            "Região 1 - Rubem Braga",
+            "Região 1 - Sen. João de Medeiros",
+            "Região 1 - Prof. Elson José",
+            "Região 1 - Prof. Rubens José Vervloet",
+            "Região 2 - Antonio Debarcellos",
+            "Região 2 - Diretora Zdmea",
+            "Região 2 - Edson Tavares",
+            "Região 2 - Guilherme Santos",
+            "Região 2 - Maria Luiza dos Santos",
+            "Região 2 - Marina Barcellos",
+            "Região 2 - Prof. Zaluar Dias",
+            "Região 2 - Prof. Leopoldina Conceição",
+            "Região 2 - Prof. Raymunda de Mendonça",
+            "Região 2 - Ricardina Stamato",
+            "Região 2 - Rev. Antonio",
+            "Região 3 - Ana Bernardes",
+            "Região 3 - Antonia Malbar",
+            "Região 3 - Antonio Bezerra",
+            "Região 3 - Antonio Pinto",
+            "Região 3 - Barão do Rio Brando",
+            "Região 3 - Cecília Marchesi",
+            "Região 3 - Giovani Cavalieri",
+            "Região 3 - Graciano Neves",
+            "Região 3 - José Siqueira",
+            "Região 3 - Leonel Brizola",
+            "Região 3 - Mario Casanova",
+            "Região 3 - Ofelia Escobar",
+            "Região 3 - Prof. Antonio Lorenzutti",
+            "Região 3 - Prof. Jorge Anizio",
+            "Região 3 - Saturnino Rangel",
+            "Região 3 - Ulisses Alvares",
+            "Região 3 - Macionília",
+            "Região 3 - Joffre Fraga",
+            "Região 4 - Dante Michelini",
+            "Região 4 - Domingos José Martins",
+            "Região 4 - Dr Tancredo",
+            "Região 4 - Gil Bernardes",
+            "Região 4 - Izaltina Almeida",
+            "Região 4 - José Elias de Queiroz",
+            "Região 4 - Juiz Jairo",
+            "Região 4 - Maria Eleonora",
+            "Região 4 - Paulo Mares Guia",
+            "Região 4 - Pedro Herkenhoff",
+            "Região 4 - Prof. Emilia",
+            "Região 4 - Ezequiel Leal",
+            "Região 5 -  Alger Ribeiro",
+            "Região 5 - Aly da Silva",
+            "Região 5 - Deolindo Perim",
+            "Região 5 - Dep. Paulo Sergio Borges",
+            "Região 5 - Dijairo Gonçalves",
+            "Região 5 - Dr. Tuffy",
+            "Região 5 - Gov. Christiano",
+            "Região 5 - Ilha da Jussara",
+            "Região 5 - Prof. Aylton de Almeida",
+            "Região 5 - Prof. Darcy Ribeiro",
+            "Região 5 - Prof. Paulo Cesar Vinha",
+            "Região 5 - Prof. Maria da Gloria",
+            "Região 5 - Prof. Nair Dias",
+            "Região 5 - Rev. Waldomiro",
+            "Região 5 - Pref. Vasco Alves"
+            // ... add more options here
+        ];
+
+        // Initialize Typeahead
+        $('#escola').typeahead({
+            source: escolas
+        });
+    </script>
+    <script>
+        function submitForm() {
+            google.script.run.withSuccessHandler(alert('Dados enviados com sucesso!')).processForm(document
+                .getElementById('myForm'));
+            document.getElementById('myForm').reset();
+        }
+    </script>
+</body>
+
+</html>
